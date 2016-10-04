@@ -8,20 +8,16 @@
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
-    <TextView
-        android:id="@+id/fullscreen_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:keepScreenOn="true"
-        android:text="@string/dummy_content"
-        android:textColor="#33b5e5"
-        android:textSize="50sp"
-        android:textStyle="bold" />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:fillViewport="true">
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/nhl">
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -54,9 +50,74 @@
             android:layout_row="1"
             android:layout_column="1"
             android:src="@drawable/buffalosabres" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calgaryFlamesIB"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:src="@drawable/calgaryflames" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/carolinaHurricanesIB"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:src="@drawable/carolinahurricanes" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chicagoBlackhawksIB"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:src="@drawable/chicagoblackhawks" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/coloradoAvalancheIB"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:src="@drawable/coloradoavalanche" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/columbusBlueJacketsIB"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:src="@drawable/columbusbluejackets" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dallasStarsIB"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:src="@drawable/dallasstars" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/detroitRedWingsIB"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:src="@drawable/detroitredwings" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edmontonOilersIB"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:src="@drawable/edmontonoilers" />
     </GridLayout>
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
+    </ScrollView>
 
 </FrameLayout>
