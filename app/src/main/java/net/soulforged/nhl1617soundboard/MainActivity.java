@@ -21,6 +21,7 @@ import java.io.IOException;
  */
 public class MainActivity extends AppCompatActivity {
     MediaPlayer mediaPlayer;
+    int activeSong = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +66,60 @@ public class MainActivity extends AppCompatActivity {
 
         ImageButton edmontonOilersButton = (ImageButton) findViewById(R.id.edmontonOilersIB);
         edmontonOilersButton.setOnClickListener(edmontonOilersHandler);
+
+        ImageButton floridaPanthersButton = (ImageButton) findViewById(R.id.floridaPanthersIB);
+        floridaPanthersButton.setOnClickListener(floridaPanthersHandler);
+
+        ImageButton laKingsButton = (ImageButton) findViewById(R.id.laKingsIB);
+        laKingsButton.setOnClickListener(laKingsHandler);
+
+        ImageButton minesotaWildButton = (ImageButton) findViewById(R.id.minesotaWildIB);
+        minesotaWildButton.setOnClickListener(minesotaWildHandler);
+
+        ImageButton montrealCanadiensButton = (ImageButton) findViewById(R.id.montrealCanadiensIB);
+        montrealCanadiensButton.setOnClickListener(montrealCanadiensHandler);
+
+        ImageButton nashvillePredatorsButton = (ImageButton) findViewById(R.id.nashvillePredatorsIB);
+        nashvillePredatorsButton.setOnClickListener(nashvillePredatorsHandler);
+
+        ImageButton njDevilsButton = (ImageButton) findViewById(R.id.njDevilsIB);
+        njDevilsButton.setOnClickListener(njDevilsHandler);
+
+        ImageButton nyIslandersButton = (ImageButton) findViewById(R.id.nyIslandersIB);
+        nyIslandersButton.setOnClickListener(nyIslandersHandler);
+
+        ImageButton nyRangersButton = (ImageButton) findViewById(R.id.nyRangersIB);
+        nyRangersButton.setOnClickListener(nyRangersHandler);
+
+        ImageButton ottawaSenatorsButton = (ImageButton) findViewById(R.id.ottawaSenatorsIB);
+        ottawaSenatorsButton.setOnClickListener(ottawaSenatorsHandler);
+
+        ImageButton philadelphiaFlyersButton = (ImageButton) findViewById(R.id.philadelphiaFlyersIB);
+        philadelphiaFlyersButton.setOnClickListener(philadelphiaFlyersHandler);
+
+        ImageButton pittsburghPenguinsButton = (ImageButton) findViewById(R.id.pittsburghPenguinsIB);
+        pittsburghPenguinsButton.setOnClickListener(pittsburghPenguinsHandler);
+
+        ImageButton sanJoseShraksButton = (ImageButton) findViewById(R.id.sanJoseSharksIB);
+        sanJoseShraksButton.setOnClickListener(sanJoseSharksHandler);
+
+        ImageButton stLouisBluesButton = (ImageButton) findViewById(R.id.stLouisBluesIB);
+        stLouisBluesButton.setOnClickListener(stLouisBluesHandler);
+
+        ImageButton tampaBayLightningButton = (ImageButton) findViewById(R.id.tampaBayLightningIB);
+        tampaBayLightningButton.setOnClickListener(tampaBayLightningHandler);
+
+        ImageButton torontoMapleLeafsButton = (ImageButton) findViewById(R.id.torontoMapleLeafsIB);
+        torontoMapleLeafsButton.setOnClickListener(torontoMapleLeafsHandler);
+
+        ImageButton vancouverCanucksButton = (ImageButton) findViewById(R.id.vancouverCanucksIB);
+        vancouverCanucksButton.setOnClickListener(vancouverCanucksHandler);
+
+        ImageButton washintongCapitalsButton = (ImageButton) findViewById(R.id.washintongCapitalsIB);
+        washintongCapitalsButton.setOnClickListener(washintongCapitalsHandler);
+
+        ImageButton winnipegJetsButton = (ImageButton) findViewById(R.id.winnipegJetsIB);
+        winnipegJetsButton.setOnClickListener(winnipegJetsHandler);
     }
 
 
@@ -199,6 +254,19 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    View.OnClickListener edmontonOilersHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("edmontonoilerssong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
     View.OnClickListener detroitRedWingsHandler = new View.OnClickListener() {
         public void onClick(View v) {
             try {
@@ -212,10 +280,231 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    View.OnClickListener edmontonOilersHandler = new View.OnClickListener() {
+    View.OnClickListener floridaPanthersHandler = new View.OnClickListener() {
         public void onClick(View v) {
             try {
-                AssetFileDescriptor afd = getAssets().openFd("edmontonoilerssong.mp3");
+                AssetFileDescriptor afd = getAssets().openFd("floridapantherssong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
+    View.OnClickListener laKingsHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("lakingssong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
+    View.OnClickListener minesotaWildHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("minesotawildsong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
+    View.OnClickListener montrealCanadiensHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("montrealcanadienssong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
+    View.OnClickListener nashvillePredatorsHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("nashvillepredatorssong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
+    View.OnClickListener njDevilsHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("njdevilssong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
+    View.OnClickListener nyIslandersHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("nyislanderssong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
+    View.OnClickListener nyRangersHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("nyrangerssong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
+    View.OnClickListener ottawaSenatorsHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("ottawasenatorssong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
+    View.OnClickListener philadelphiaFlyersHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("philadelphiaflyerssong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
+    View.OnClickListener pittsburghPenguinsHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("pittsburghpenguinssong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
+    View.OnClickListener sanJoseSharksHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("sanjosesharkssong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
+    View.OnClickListener stLouisBluesHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("stlouisbluessong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
+    View.OnClickListener tampaBayLightningHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("tampabaylightningsong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
+    View.OnClickListener torontoMapleLeafsHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("torontomapleleafssong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
+    View.OnClickListener vancouverCanucksHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("vancouvercanuckssong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
+    View.OnClickListener washintongCapitalsHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("washintongcapitalssong.mp3");
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e1) {
+            }
+        }
+    };
+
+    View.OnClickListener winnipegJetsHandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            try {
+                AssetFileDescriptor afd = getAssets().openFd("winnipegjetssong.mp3");
                 mediaPlayer.reset();
                 mediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
                 mediaPlayer.prepare();
