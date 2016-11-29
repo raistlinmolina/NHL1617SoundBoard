@@ -1,4 +1,4 @@
-package net.soulforged.nhl1617soundboard;
+package net.soulforged.hockeygoalhorns;
 
 import org.junit.Test;
 
